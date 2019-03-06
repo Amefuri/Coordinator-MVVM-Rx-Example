@@ -15,8 +15,9 @@ class MainViewController: UIViewController, StoryboardInitializable {
   // MARK: IBOutlet
   
   @IBOutlet weak var backButton: UIButton!
+  @IBOutlet weak var tokenLabel: UILabel!
   
-  // MARK: Property 
+  // MARK: Property
   
   var viewModel: MainViewModelType!
   let disposeBag = DisposeBag()

@@ -25,9 +25,9 @@ class LoginCoordinator: BaseCoordinator<Void> {
     viewController.viewModel = viewModel
     
     viewModel.coordinates.navigateToMain
-      .flatMapLatest { [weak self] _ -> Observable<Void> in
+      .flatMapLatest { [weak self] token -> Observable<Void> in
         guard let `self` = self else { return Observable.just(()) }
-        return self.navigateToMain(on: viewController)
+        return self.navigateToMain(on: viewController, token: token)
       }
       .subscribe()
       .disposed(by: disposeBag)
@@ -38,8 +38,8 @@ class LoginCoordinator: BaseCoordinator<Void> {
     return .never()
   }
   
-  private func navigateToMain(on rootViewController: UIViewController) -> Observable<Void> {
-    let mainCoordinator = MainCoordinator(rootViewController: rootViewController)
+  private func navigateToMain(on rootViewController: UIViewController, token: String) -> Observable<Void> {
+    let mainCoordinator = MainCoordinator(rootViewController: rootViewController, token: token)
     return coordinate(to: mainCoordinator)
   }
 }
