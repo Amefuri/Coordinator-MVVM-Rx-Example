@@ -11,10 +11,8 @@ import RxSwift
 
 class AppCoordinator: BaseCoordinator<Void> {
   
-  private let window: UIWindow
-  
-  init(window: UIWindow) {
-    self.window = window
+  override init(window: UIWindow, baseViewController: UIViewController = UIViewController(), transitionType: CoordinatorTransitionType = .root, animated: Bool = true) {
+    super.init(window: window, baseViewController: baseViewController, transitionType: transitionType)
   }
   
   override func start() -> Observable<Void> {

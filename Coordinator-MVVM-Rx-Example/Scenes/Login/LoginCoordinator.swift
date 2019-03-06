@@ -11,12 +11,6 @@ import RxSwift
 
 class LoginCoordinator: BaseCoordinator<Void> {
   
-  let window: UIWindow!
-  
-  init(window: UIWindow) {
-    self.window = window
-  }
-  
   override func start() -> Observable<Void> {
     let viewModel = LoginViewModel()
     let viewController = LoginViewController.initFromStoryboard(name: Storyboard.main.identifier)
@@ -27,7 +21,7 @@ class LoginCoordinator: BaseCoordinator<Void> {
     viewModel.coordinates.navigateToMain
       .flatMapLatest { [weak self] token -> Observable<Void> in
         guard let `self` = self else { return Observable.just(()) }
-        return self.navigateToMain(window: self.window, rootViewController: viewController, token: token)
+        return self.navigateToMain(window: self.window, baseViewController: viewController, token: token)
       }
       .subscribe()
       .disposed(by: disposeBag)
@@ -38,8 +32,9 @@ class LoginCoordinator: BaseCoordinator<Void> {
     return .never()
   }
   
-  private func navigateToMain(window: UIWindow, rootViewController: UIViewController, token: String) -> Observable<Void> {
-    let mainCoordinator = MainCoordinator(window: window, rootViewController: rootViewController, token: token)
+  private func navigateToMain(window: UIWindow, baseViewController: UIViewController, token: String) -> Observable<Void> {
+    let mainCoordinator = MainCoordinator(window: window, baseViewController: baseViewController)
+    mainCoordinator.inputParams.token = token
     return coordinate(to: mainCoordinator)
   }
 }

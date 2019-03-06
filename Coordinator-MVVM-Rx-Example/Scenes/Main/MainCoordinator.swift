@@ -9,17 +9,13 @@
 import UIKit
 import RxSwift
 
-class MainCoordinator: BaseCoordinator<Void> {
+protocol MainCoordinatorInputParamsType: class {
+  var token: String { get set }
+}
+
+class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
   
-  let window: UIWindow
-  let rootViewController: UIViewController
-  let token:String
-  
-  init(window: UIWindow, rootViewController: UIViewController, token: String) {
-    self.window = window
-    self.rootViewController = rootViewController
-    self.token = token
-  }
+  var token: String = ""
   
   override func start() -> Observable<Void> {
     let viewModel = MainViewModel(token: token)
@@ -31,8 +27,10 @@ class MainCoordinator: BaseCoordinator<Void> {
         viewController.navigationController?.popViewController(animated: true)
       }).disposed(by: disposeBag)
     
-    window.rootViewController = viewController
+    transitionScenes(destinationViewController: viewController)
     
     return viewModel.coordinates.navigateBack
   }
+  
+  var inputParams: MainCoordinatorInputParamsType { return self }
 }
