@@ -11,8 +11,8 @@ import RxSwift
 
 class MainCoordinator: BaseCoordinator<Void> {
   
-  let rootViewController: UIViewController!
-  var token:String?
+  let rootViewController: UIViewController
+  let token:String
   
   init(rootViewController: UIViewController, token: String) {
     self.rootViewController = rootViewController
@@ -20,7 +20,7 @@ class MainCoordinator: BaseCoordinator<Void> {
   }
   
   override func start() -> Observable<Void> {
-    let viewModel = MainViewModel(token: token ?? "")
+    let viewModel = MainViewModel(token: token)
     let viewController = MainViewController.initFromStoryboard(name: Storyboard.main.storyboardID)
     viewController.viewModel = viewModel
     
