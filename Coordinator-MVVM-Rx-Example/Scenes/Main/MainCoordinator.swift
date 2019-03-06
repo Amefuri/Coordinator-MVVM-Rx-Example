@@ -18,18 +18,37 @@ class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
   var token: String = ""
   
   override func start() -> Observable<Void> {
-    let viewModel = MainViewModel(token: token)
-    let viewController = MainViewController.initFromStoryboard(name: Storyboard.main.identifier)
-    viewController.viewModel = viewModel
+    let mainViewModel = MainViewModel(token: token)
+    let mainViewController = MainViewController.initFromStoryboard(name: Storyboard.main.identifier) 
+    mainViewController.viewModel = mainViewModel
+  
+    let leftTabViewModel = LeftTabViewModel()
+    let leftTabViewController = LeftTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
+    leftTabViewController.viewModel = leftTabViewModel
     
-    viewModel.coordinates.navigateBack
+    let rightTabViewModel = RightTabViewModel()
+    let rightTabViewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
+    rightTabViewController.viewModel = rightTabViewModel
+    
+    // Setup LeftNavigation
+    let leftNav = UINavigationController(rootViewController: leftTabViewController)
+    leftNav.tabBarItem = UITabBarItem(title: "LeftBar", image: nil, selectedImage: nil)
+    
+    // Setup RightNavigation
+    let rightNav = UINavigationController(rootViewController: rightTabViewController)
+    rightNav.tabBarItem = UITabBarItem(title: "RightBar", image: nil, selectedImage: nil)
+    
+    // Setup TabBarViewController
+    mainViewController.viewControllers = [leftNav, rightNav]
+    
+    transitionScenes(destinationViewController: mainViewController)
+    
+    /*viewModel.coordinates.navigateBack
       .subscribe(onNext: { _ in
         viewController.navigationController?.popViewController(animated: true)
-      }).disposed(by: disposeBag)
+      }).disposed(by: disposeBag)*/
     
-    transitionScenes(destinationViewController: viewController)
-    
-    return viewModel.coordinates.navigateBack
+    return .never() //viewModel.coordinates.navigateBack
   }
   
   var inputParams: MainCoordinatorInputParamsType { return self }
