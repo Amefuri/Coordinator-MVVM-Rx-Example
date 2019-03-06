@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class MainViewController: UIViewController, StoryboardInitializable {
+class MainViewController: UITabBarController, StoryboardInitializable {
   
   // MARK: IBOutlet
   

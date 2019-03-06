@@ -24,6 +24,12 @@
 		7286FB86222E727100538946 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7286FB85222E727100538946 /* MainViewController.swift */; };
 		7286FB88222E72A900538946 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7286FB87222E72A900538946 /* MainViewModel.swift */; };
 		7286FB8A222E73F800538946 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7286FB89222E73F800538946 /* MainCoordinator.swift */; };
+		728A2603222F882D00654DAE /* LeftTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A2602222F882D00654DAE /* LeftTabViewController.swift */; };
+		728A2605222F884400654DAE /* LeftTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A2604222F884400654DAE /* LeftTabViewModel.swift */; };
+		728A2607222F88B900654DAE /* RightTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A2606222F88B900654DAE /* RightTabViewController.swift */; };
+		728A2609222F88C500654DAE /* RightTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A2608222F88C500654DAE /* RightTabViewModel.swift */; };
+		728A260B222F8AD800654DAE /* LeftTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */; };
+		728A260D222F8AE600654DAE /* RightTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260C222F8AE600654DAE /* RightTabCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		7286FB85222E727100538946 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7286FB87222E72A900538946 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7286FB89222E73F800538946 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		728A2602222F882D00654DAE /* LeftTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTabViewController.swift; sourceTree = "<group>"; };
+		728A2604222F884400654DAE /* LeftTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTabViewModel.swift; sourceTree = "<group>"; };
+		728A2606222F88B900654DAE /* RightTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabViewController.swift; sourceTree = "<group>"; };
+		728A2608222F88C500654DAE /* RightTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabViewModel.swift; sourceTree = "<group>"; };
+		728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTabCoordinator.swift; sourceTree = "<group>"; };
+		728A260C222F8AE600654DAE /* RightTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabCoordinator.swift; sourceTree = "<group>"; };
 		FDB20983AEF639B55B68FDE9 /* Pods_Coordinator_MVVM_Rx_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coordinator_MVVM_Rx_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +141,8 @@
 			children = (
 				7286FB6C222E42D200538946 /* Login */,
 				7286FB6D222E42DA00538946 /* Main */,
+				728A2600222F828000654DAE /* LeftTab */,
+				728A2601222F828E00654DAE /* RightTab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -211,6 +225,26 @@
 				7286FB83222E515200538946 /* Storyboard.swift */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		728A2600222F828000654DAE /* LeftTab */ = {
+			isa = PBXGroup;
+			children = (
+				728A2602222F882D00654DAE /* LeftTabViewController.swift */,
+				728A2604222F884400654DAE /* LeftTabViewModel.swift */,
+				728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */,
+			);
+			path = LeftTab;
+			sourceTree = "<group>";
+		};
+		728A2601222F828E00654DAE /* RightTab */ = {
+			isa = PBXGroup;
+			children = (
+				728A2606222F88B900654DAE /* RightTabViewController.swift */,
+				728A2608222F88C500654DAE /* RightTabViewModel.swift */,
+				728A260C222F8AE600654DAE /* RightTabCoordinator.swift */,
+			);
+			path = RightTab;
 			sourceTree = "<group>";
 		};
 		72919CBACE3E22D5FEA00BB3 /* Frameworks */ = {
@@ -377,17 +411,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				728A2609222F88C500654DAE /* RightTabViewModel.swift in Sources */,
 				7286FB7E222E4F7700538946 /* StoryboardInitializable.swift in Sources */,
 				7286FB72222E43B900538946 /* LoginViewModel.swift in Sources */,
+				728A2605222F884400654DAE /* LeftTabViewModel.swift in Sources */,
 				7286FB79222E496900538946 /* BaseCoordinator.swift in Sources */,
 				7286FB70222E431100538946 /* LoginViewController.swift in Sources */,
+				728A2607222F88B900654DAE /* RightTabViewController.swift in Sources */,
 				7286FB84222E515200538946 /* Storyboard.swift in Sources */,
 				7286FB8A222E73F800538946 /* MainCoordinator.swift in Sources */,
+				728A260B222F8AD800654DAE /* LeftTabCoordinator.swift in Sources */,
 				7286FB88222E72A900538946 /* MainViewModel.swift in Sources */,
+				728A260D222F8AE600654DAE /* RightTabCoordinator.swift in Sources */,
 				7286FB76222E48A100538946 /* LoginCoordinator.swift in Sources */,
 				7286FB86222E727100538946 /* MainViewController.swift in Sources */,
 				7286FB49222E3FE700538946 /* AppDelegate.swift in Sources */,
 				7286FB7B222E49FC00538946 /* AppCoordinator.swift in Sources */,
+				728A2603222F882D00654DAE /* LeftTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
