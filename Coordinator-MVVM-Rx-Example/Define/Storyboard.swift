@@ -9,7 +9,7 @@
 enum Storyboard {
   case main
   
-  var storyboardID: String {
+  var identifier: String {
     switch self {
     case .main:
       return "Main"

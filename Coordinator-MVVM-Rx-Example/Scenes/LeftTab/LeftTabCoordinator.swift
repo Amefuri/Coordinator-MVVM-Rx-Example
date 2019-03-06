@@ -13,7 +13,7 @@ class LeftTabCoordinator: BaseCoordinator<Void> {
   
   override func start() -> Observable<Void> {
     let viewModel = LeftTabViewModel()
-    let viewController = LeftTabViewController.initFromStoryboard(name: Storyboard.main.storyboardID)
+    let viewController = LeftTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
     return .never()

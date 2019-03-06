@@ -13,7 +13,7 @@ class RightTabCoordinator: BaseCoordinator<Void> {
   
   override func start() -> Observable<Void> {
     let viewModel = RightTabViewModel()
-    let viewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.storyboardID)
+    let viewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
     return .never()

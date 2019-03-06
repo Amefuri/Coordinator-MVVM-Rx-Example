@@ -11,17 +11,19 @@ import RxSwift
 
 class MainCoordinator: BaseCoordinator<Void> {
   
+  let window: UIWindow
   let rootViewController: UIViewController
   let token:String
   
-  init(rootViewController: UIViewController, token: String) {
+  init(window: UIWindow, rootViewController: UIViewController, token: String) {
+    self.window = window
     self.rootViewController = rootViewController
     self.token = token
   }
   
   override func start() -> Observable<Void> {
     let viewModel = MainViewModel(token: token)
-    let viewController = MainViewController.initFromStoryboard(name: Storyboard.main.storyboardID)
+    let viewController = MainViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
     viewModel.coordinates.navigateBack
@@ -29,7 +31,7 @@ class MainCoordinator: BaseCoordinator<Void> {
         viewController.navigationController?.popViewController(animated: true)
       }).disposed(by: disposeBag)
     
-    rootViewController.navigationController?.pushViewController(viewController, animated: true)
+    window.rootViewController = viewController
     
     return viewModel.coordinates.navigateBack
   }

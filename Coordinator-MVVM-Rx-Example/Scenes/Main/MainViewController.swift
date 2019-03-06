@@ -14,8 +14,8 @@ class MainViewController: UITabBarController, StoryboardInitializable {
   
   // MARK: IBOutlet
   
-  @IBOutlet weak var backButton: UIButton!
-  @IBOutlet weak var tokenLabel: UILabel!
+  //@IBOutlet weak var backButton: UIButton!
+  //@IBOutlet weak var tokenLabel: UILabel!
   
   // MARK: Property
   
@@ -31,8 +31,8 @@ class MainViewController: UITabBarController, StoryboardInitializable {
   
   func bindViewModel() {
     
-    backButton.rx.tap
+    /*backButton.rx.tap
       .bind(to: viewModel.inputs.navigateBackTrigger)
-      .disposed(by: disposeBag)
+      .disposed(by: disposeBag)*/
   }
 }
