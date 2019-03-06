@@ -18,7 +18,7 @@ protocol LoginViewModelOutputs {
 }
 
 protocol LoginViewModelCoordinates {
-  var navigateToMain: PublishSubject<Void> { get }
+  var navigateToMain: PublishSubject<String> { get }
 }
 
 protocol LoginViewModelType {
@@ -38,7 +38,7 @@ class LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOu
   public init() {
     
     inputs.loginTrigger
-      .map{_ in ()}
+      .map{ _ in return "hyuhbuknbknjk" }
       .bind(to:  coordinates.navigateToMain)
       .disposed(by: disposeBag)
   }
@@ -53,7 +53,7 @@ class LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOu
   
   // MARK: Coordinates
   
-  let navigateToMain = PublishSubject<Void>()
+  let navigateToMain = PublishSubject<String>()
   
   // MARK: Input&Output&Coordinates
     

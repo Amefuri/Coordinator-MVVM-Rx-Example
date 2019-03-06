@@ -591,14 +591,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PDE65S5MLH;
+				DEVELOPMENT_TEAM = Y35CVJZCJ5;
 				INFOPLIST_FILE = "$(SRCROOT)/Coordinator-MVVM-Rx-Example/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daydreamclover.Coordinator-MVVM-Rx-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xAdmin.Coordinator-MVVM-Rx-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,14 +611,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PDE65S5MLH;
+				DEVELOPMENT_TEAM = Y35CVJZCJ5;
 				INFOPLIST_FILE = "$(SRCROOT)/Coordinator-MVVM-Rx-Example/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daydreamclover.Coordinator-MVVM-Rx-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xAdmin.Coordinator-MVVM-Rx-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

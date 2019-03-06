@@ -14,7 +14,7 @@ protocol MainViewModelInputs {
 }
 
 protocol MainViewModelOutputs {
-    
+  
 }
 
 protocol MainViewModelCoordinates {
@@ -32,15 +32,19 @@ class MainViewModel: MainViewModelType, MainViewModelInputs, MainViewModelOutput
   // MARK: Property
   
   let disposeBag = DisposeBag()
+  let token: String
   
   // MARK: Init
     
-  public init() {
+  public init(token: String) {
+    
+    self.token = token
     
     inputs
       .navigateBackTrigger
       .bind(to: coordinates.navigateBack)
       .disposed(by: disposeBag)
+    
   }
   
   // MARK: Private
