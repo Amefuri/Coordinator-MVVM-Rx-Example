@@ -11,10 +11,6 @@ import RxSwift
 
 class AppCoordinator: BaseCoordinator<Void> {
   
-  override init(window: UIWindow, baseViewController: UIViewController = UIViewController(), transitionType: CoordinatorTransitionType = .root, animated: Bool = true) {
-    super.init(window: window, baseViewController: baseViewController, transitionType: transitionType)
-  }
-  
   override func start() -> Observable<Void> {
     let loginCoordinator = LoginCoordinator(window: window)
     return coordinate(to: loginCoordinator)
