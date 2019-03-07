@@ -16,7 +16,7 @@ enum CoordinatorTransitionType {
 
 extension BaseCoordinator {
   
-  func transitionScenes(destinationViewController: UIViewController) {
+  func transition(to destinationViewController: UIViewController) {
     switch transitionType {
     case .push:
       baseViewController.navigationController?.pushViewController(destinationViewController, animated: animated)

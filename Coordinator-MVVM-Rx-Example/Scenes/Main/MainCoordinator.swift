@@ -41,14 +41,9 @@ class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
     // Setup TabBarViewController
     mainViewController.viewControllers = [leftNav, rightNav]
     
-    transitionScenes(destinationViewController: mainViewController)
+    transition(to: mainViewController)
     
-    /*viewModel.coordinates.navigateBack
-      .subscribe(onNext: { _ in
-        viewController.navigationController?.popViewController(animated: true)
-      }).disposed(by: disposeBag)*/
-    
-    return .never() //viewModel.coordinates.navigateBack
+    return .never()
   }
   
   var inputParams: MainCoordinatorInputParamsType { return self }
