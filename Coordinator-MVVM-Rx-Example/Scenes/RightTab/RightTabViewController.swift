@@ -16,14 +16,29 @@ class RightTabViewController: UIViewController, StoryboardInitializable {
   
   // MARK: Property 
   
+  let disposeBag = DisposeBag()
   var viewModel: RightTabViewModelType!
+  var rightBarButtonItem: UIBarButtonItem!
   
   // MARK: View Life Cycle
     
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
+    bindViewModel()
   }
   
   func bindViewModel() {
+    
+    rightBarButtonItem
+      .rx
+      .tap
+      .bind(to: viewModel.inputs.rightBarButtonTrigger)
+      .disposed(by: disposeBag)
+  }
+  
+  func setup() {
+    rightBarButtonItem = UIBarButtonItem(title: "Modal", style: .done, target: self, action: nil/*#selector()*/)
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem
   }
 }

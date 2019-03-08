@@ -16,6 +16,8 @@ class LeftTabCoordinator: BaseCoordinator<Void> {
     let viewController = LeftTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
+    transition(to: viewController)
+    
     return .never()
   }
 }

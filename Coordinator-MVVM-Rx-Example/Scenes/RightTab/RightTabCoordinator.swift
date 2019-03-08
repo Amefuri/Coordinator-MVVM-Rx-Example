@@ -16,6 +16,14 @@ class RightTabCoordinator: BaseCoordinator<Void> {
     let viewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
+    viewModel
+      .coordinates
+      .navigateToTabDetail
+      .subscribe(onNext: { _ in
+        print("Coordinate trigger")})
+      .disposed(by: disposeBag)
+    
+    transition(to: viewController)
     return .never()
   }
 }

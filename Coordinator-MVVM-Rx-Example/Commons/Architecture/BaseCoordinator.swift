@@ -35,7 +35,7 @@ class BaseCoordinator<ResultType> {
   
   internal let animated: Bool
   
-  init(window: UIWindow, baseViewController: UIViewController = UIViewController(), transitionType: CoordinatorTransitionType = .root, animated: Bool = true) {
+  init(window: UIWindow, baseViewController: UIViewController = UIViewController(), transitionType: CoordinatorTransitionType = .rootWindow, animated: Bool = true) {
     self.window = window
     self.baseViewController = baseViewController
     self.transitionType = transitionType
