@@ -42,17 +42,11 @@ class TabDetailViewController: UIViewController, StoryboardInitializable {
       .tap
       .bind(to: viewModel.inputs.navigateBackTrigger)
       .disposed(by: disposeBag)
-    
   }
   
   func setup() {
     leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: nil/*#selector()*/)
     self.navigationItem.leftBarButtonItem = leftBarButtonItem
-
-    if let _ = navigationController {
-      backButton.isHidden = true
-    } else {
-      backButton.isHidden = false
-    }
+    backButton.isHidden = (navigationController != nil)
   }
 }
