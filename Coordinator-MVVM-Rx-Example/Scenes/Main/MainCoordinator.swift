@@ -25,14 +25,6 @@ class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
     let mainViewController = MainViewController.initFromStoryboard(name: Storyboard.main.identifier) 
     mainViewController.viewModel = mainViewModel
   
-    /*let leftTabViewModel = LeftTabViewModel()
-    let leftTabViewController = LeftTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
-    leftTabViewController.viewModel = leftTabViewModel
-    
-    let rightTabViewModel = RightTabViewModel()
-    let rightTabViewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
-    rightTabViewController.viewModel = rightTabViewModel*/
-    
     // Setup LeftNavigation
     let leftNav = UINavigationController()
     leftNav.tabBarItem = UITabBarItem(title: "LeftBar", image: nil, selectedImage: nil)
@@ -46,12 +38,12 @@ class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
     
     transition(to: mainViewController)
     
-    leftBarCoordinator = LeftTabCoordinator(window: window, baseViewController: leftNav, transitionType: .rootNaviagtion)
+    leftBarCoordinator = LeftTabCoordinator(window: window, baseViewController: leftNav, transitionType: .rootNavigation)
     coordinate(to: leftBarCoordinator)
       .subscribe()
       .disposed(by: disposeBag)
     
-    rightBarCoordinator = RightTabCoordinator(window: window, baseViewController: rightNav, transitionType: .rootNaviagtion)
+    rightBarCoordinator = RightTabCoordinator(window: window, baseViewController: rightNav, transitionType: .rootNavigation)
     coordinate(to: rightBarCoordinator)
       .subscribe()
       .disposed(by: disposeBag)

@@ -12,7 +12,7 @@ enum CoordinatorTransitionType {
   case push
   case modal
   case rootWindow
-  case rootNaviagtion
+  case rootNavigation
 }
 
 extension BaseCoordinator {
@@ -25,7 +25,7 @@ extension BaseCoordinator {
       baseViewController.present(destinationViewController, animated: animated, completion: nil)
     case .rootWindow:
       window.rootViewController = destinationViewController
-    case .rootNaviagtion:
+    case .rootNavigation:
       (baseViewController as! UINavigationController).pushViewController(destinationViewController, animated: false)
     }
   }
@@ -38,7 +38,7 @@ extension BaseCoordinator {
       baseViewController.dismiss(animated: animated, completion: nil)
     case .rootWindow:
       break
-    case .rootNaviagtion:
+    case .rootNavigation:
       break
     }
   }
