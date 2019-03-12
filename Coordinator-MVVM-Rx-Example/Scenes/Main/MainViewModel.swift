@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol MainViewModelInputs {
-  var navigateBackTrigger: PublishSubject<Void> { get }
+  var tabIndexTrigger: PublishSubject<Int> { get }
 }
 
 protocol MainViewModelOutputs {
@@ -18,7 +18,7 @@ protocol MainViewModelOutputs {
 }
 
 protocol MainViewModelCoordinates {
-  var navigateBack: PublishSubject<Void> { get }
+  var navigateTabIndex: PublishSubject<Int> { get }
 }
 
 protocol MainViewModelType {
@@ -37,27 +37,24 @@ class MainViewModel: MainViewModelType, MainViewModelInputs, MainViewModelOutput
   // MARK: Init
     
   public init(token: String) {
-    
     self.token = token
     
     inputs
-      .navigateBackTrigger
-      .bind(to: coordinates.navigateBack)
+      .tabIndexTrigger
+      .bind(to: coordinates.navigateTabIndex)
       .disposed(by: disposeBag)
-    
   }
   
   // MARK: Private
   
   // MARK: Input
   
-  let navigateBackTrigger = PublishSubject<Void>()
+  var tabIndexTrigger = PublishSubject<Int>()
   
   // MARK: Output
   
   // MARK: Coordinate
-  
-  let navigateBack = PublishSubject<Void>()
+  var navigateTabIndex = PublishSubject<Int>()
   
   // MARK: Input&Output&Coordinate
     

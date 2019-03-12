@@ -114,5 +114,41 @@
             </objects>
             <point key="canvasLocation" x="2188" y="-61"/>
         </scene>
+        <!--Tab Detail View Controller-->
+        <scene sceneID="ZoV-ZA-PNt">
+            <objects>
+                <viewController storyboardIdentifier="TabDetailViewController" id="QDy-eq-dNY" customClass="TabDetailViewController" customModule="Coordinator_MVVM_Rx_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eja-aj-A1B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TabDetail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfG-oA-GiO">
+                                <rect key="frame" x="152" y="323" width="71.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-ni-SIb">
+                                <rect key="frame" x="170.5" y="352" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FfG-oA-GiO" firstAttribute="centerX" secondItem="Eja-aj-A1B" secondAttribute="centerX" id="FfE-gf-7cu"/>
+                            <constraint firstItem="FfG-oA-GiO" firstAttribute="centerY" secondItem="Eja-aj-A1B" secondAttribute="centerY" id="mun-Mt-EXN"/>
+                            <constraint firstItem="hFY-ni-SIb" firstAttribute="centerX" secondItem="Eja-aj-A1B" secondAttribute="centerX" id="v1F-27-uCX"/>
+                            <constraint firstItem="hFY-ni-SIb" firstAttribute="top" secondItem="FfG-oA-GiO" secondAttribute="bottom" constant="8" id="xQg-F0-oKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UcZ-i2-G5j"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="hFY-ni-SIb" id="fN0-j9-vl2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YE9-eN-h7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="-60"/>
+        </scene>
     </scenes>
 </document>

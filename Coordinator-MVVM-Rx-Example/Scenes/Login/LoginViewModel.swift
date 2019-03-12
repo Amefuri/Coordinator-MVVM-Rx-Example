@@ -29,6 +29,11 @@ protocol LoginViewModelType {
 
 class LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOutputs, LoginViewModelCoordinates {
   
+  func navigateBack() {
+    
+  }
+  
+  
   // MARK: Property
   
   let disposeBag = DisposeBag()

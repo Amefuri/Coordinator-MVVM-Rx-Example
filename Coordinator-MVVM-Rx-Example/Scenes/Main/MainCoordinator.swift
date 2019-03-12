@@ -56,6 +56,20 @@ class MainCoordinator: BaseCoordinator<Void>, MainCoordinatorInputParamsType {
       .subscribe()
       .disposed(by: disposeBag)
     
+    mainViewModel
+      .coordinates
+      .navigateTabIndex
+      .subscribe(onNext: { index in
+        switch index {
+        case 0:
+          print("0")
+        case 1:
+          print("1")
+        default:
+          break
+        }
+      }).disposed(by: disposeBag)
+    
     return .never()
   }
   

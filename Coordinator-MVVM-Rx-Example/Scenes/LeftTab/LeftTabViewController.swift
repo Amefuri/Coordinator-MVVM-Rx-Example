@@ -17,13 +17,27 @@ class LeftTabViewController: UIViewController, StoryboardInitializable {
   // MARK: Property 
   
   var viewModel: LeftTabViewModelType!
+  var rightBarButtonItem: UIBarButtonItem!
+  let disposeBag = DisposeBag()
   
   // MARK: View Life Cycle
     
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
+    bindViewModel()
   }
   
   func bindViewModel() {
+    rightBarButtonItem
+      .rx
+      .tap
+      .bind(to: viewModel.inputs.rightBarButtonTrigger)
+      .disposed(by: disposeBag)
+  }
+  
+  func setup() {
+    rightBarButtonItem = UIBarButtonItem(title: "Push", style: .done, target: self, action: nil/*#selector()*/)
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem
   }
 }

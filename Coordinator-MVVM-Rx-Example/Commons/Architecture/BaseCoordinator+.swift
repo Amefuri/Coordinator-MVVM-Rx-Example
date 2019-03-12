@@ -30,4 +30,17 @@ extension BaseCoordinator {
     }
   }
   
+  func navigateBack() {
+    switch transitionType {
+    case .push:
+      baseViewController.navigationController?.popViewController(animated: animated)
+    case .modal:
+      baseViewController.dismiss(animated: animated, completion: nil)
+    case .rootWindow:
+      break
+    case .rootNaviagtion:
+      break
+    }
+  }
+  
 }

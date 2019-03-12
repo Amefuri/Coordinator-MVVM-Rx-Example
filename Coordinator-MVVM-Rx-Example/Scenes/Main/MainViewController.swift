@@ -27,6 +27,7 @@ class MainViewController: UITabBarController, StoryboardInitializable {
   override func viewDidLoad() {
     super.viewDidLoad()
     bindViewModel()
+    delegate = self
   }
   
   func bindViewModel() {
@@ -34,5 +35,16 @@ class MainViewController: UITabBarController, StoryboardInitializable {
     /*backButton.rx.tap
       .bind(to: viewModel.inputs.navigateBackTrigger)
       .disposed(by: disposeBag)*/
+  }
+}
+
+extension MainViewController: UITabBarControllerDelegate {
+  func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+    guard let viewControllers = viewControllers else { return false }
+    if viewControllers[tabBarController.selectedIndex] == viewController {
+      viewModel.inputs.tabIndexTrigger.onNext(tabBarController.selectedIndex)
+      return false
+    }
+    return true
   }
 }

@@ -16,14 +16,20 @@ class RightTabCoordinator: BaseCoordinator<Void> {
     let viewController = RightTabViewController.initFromStoryboard(name: Storyboard.main.identifier)
     viewController.viewModel = viewModel
     
-    viewModel
-      .coordinates
-      .navigateToTabDetail
-      .subscribe(onNext: { _ in
-        print("Coordinate trigger")})
+    viewModel.coordinates.navigateToTabDetail
+      .flatMapLatest { [weak self] _ -> Observable<Void> in
+        guard let `self` = self else { return Observable.just(()) }
+        return self.navigateToTabDetail(window: self.window, baseViewController: viewController)
+      }
+      .subscribe()
       .disposed(by: disposeBag)
     
     transition(to: viewController)
     return .never()
+  }
+  
+  private func navigateToTabDetail(window: UIWindow, baseViewController: UIViewController) -> Observable<Void> {
+    let tabDetailCoordinator = TabDetailCoordinator(window: window, baseViewController: baseViewController, transitionType: .modal)
+    return coordinate(to: tabDetailCoordinator)
   }
 }

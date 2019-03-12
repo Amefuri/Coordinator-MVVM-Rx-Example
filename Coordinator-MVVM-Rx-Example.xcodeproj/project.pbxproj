@@ -31,6 +31,9 @@
 		728A260B222F8AD800654DAE /* LeftTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */; };
 		728A260D222F8AE600654DAE /* RightTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260C222F8AE600654DAE /* RightTabCoordinator.swift */; };
 		875DDE22222FC2FE0098A120 /* BaseCoordinator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875DDE21222FC2FD0098A120 /* BaseCoordinator+.swift */; };
+		875EA20022375CF200472810 /* TabDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA1FF22375CF200472810 /* TabDetailViewController.swift */; };
+		875EA20222375D0A00472810 /* TabDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA20122375D0A00472810 /* TabDetailViewModel.swift */; };
+		875EA20422375D1F00472810 /* TabDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA20322375D1F00472810 /* TabDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTabCoordinator.swift; sourceTree = "<group>"; };
 		728A260C222F8AE600654DAE /* RightTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabCoordinator.swift; sourceTree = "<group>"; };
 		875DDE21222FC2FD0098A120 /* BaseCoordinator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseCoordinator+.swift"; sourceTree = "<group>"; };
+		875EA1FF22375CF200472810 /* TabDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailViewController.swift; sourceTree = "<group>"; };
+		875EA20122375D0A00472810 /* TabDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailViewModel.swift; sourceTree = "<group>"; };
+		875EA20322375D1F00472810 /* TabDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailCoordinator.swift; sourceTree = "<group>"; };
 		FDB20983AEF639B55B68FDE9 /* Pods_Coordinator_MVVM_Rx_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coordinator_MVVM_Rx_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,7 +127,6 @@
 			children = (
 				7286FB69222E402C00538946 /* Commons */,
 				7286FB82222E513300538946 /* Define */,
-				7286FB7F222E505D00538946 /* Extensions */,
 				7286FB6B222E408A00538946 /* App */,
 				7286FB68222E402200538946 /* Scenes */,
 				7286FB6A222E403800538946 /* Resources */,
@@ -216,13 +221,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		7286FB7F222E505D00538946 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		7286FB82222E513300538946 /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +260,9 @@
 		873B21DE22327825000EAB33 /* TabDetail */ = {
 			isa = PBXGroup;
 			children = (
+				875EA1FF22375CF200472810 /* TabDetailViewController.swift */,
+				875EA20122375D0A00472810 /* TabDetailViewModel.swift */,
+				875EA20322375D1F00472810 /* TabDetailCoordinator.swift */,
 			);
 			path = TabDetail;
 			sourceTree = "<group>";
@@ -423,12 +424,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				728A2609222F88C500654DAE /* RightTabViewModel.swift in Sources */,
+				875EA20222375D0A00472810 /* TabDetailViewModel.swift in Sources */,
 				7286FB7E222E4F7700538946 /* StoryboardInitializable.swift in Sources */,
 				7286FB72222E43B900538946 /* LoginViewModel.swift in Sources */,
 				728A2605222F884400654DAE /* LeftTabViewModel.swift in Sources */,
 				7286FB79222E496900538946 /* BaseCoordinator.swift in Sources */,
 				7286FB70222E431100538946 /* LoginViewController.swift in Sources */,
 				728A2607222F88B900654DAE /* RightTabViewController.swift in Sources */,
+				875EA20422375D1F00472810 /* TabDetailCoordinator.swift in Sources */,
 				875DDE22222FC2FE0098A120 /* BaseCoordinator+.swift in Sources */,
 				7286FB84222E515200538946 /* Storyboard.swift in Sources */,
 				7286FB8A222E73F800538946 /* MainCoordinator.swift in Sources */,
@@ -438,6 +441,7 @@
 				7286FB76222E48A100538946 /* LoginCoordinator.swift in Sources */,
 				7286FB86222E727100538946 /* MainViewController.swift in Sources */,
 				7286FB49222E3FE700538946 /* AppDelegate.swift in Sources */,
+				875EA20022375CF200472810 /* TabDetailViewController.swift in Sources */,
 				7286FB7B222E49FC00538946 /* AppCoordinator.swift in Sources */,
 				728A2603222F882D00654DAE /* LeftTabViewController.swift in Sources */,
 			);
