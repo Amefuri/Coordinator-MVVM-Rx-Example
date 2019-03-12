@@ -14,9 +14,6 @@ class MainViewController: UITabBarController, StoryboardInitializable {
   
   // MARK: IBOutlet
   
-  //@IBOutlet weak var backButton: UIButton!
-  //@IBOutlet weak var tokenLabel: UILabel!
-  
   // MARK: Property
   
   var viewModel: MainViewModelType!
@@ -31,10 +28,6 @@ class MainViewController: UITabBarController, StoryboardInitializable {
   }
   
   func bindViewModel() {
-    
-    /*backButton.rx.tap
-      .bind(to: viewModel.inputs.navigateBackTrigger)
-      .disposed(by: disposeBag)*/
   }
 }
 
