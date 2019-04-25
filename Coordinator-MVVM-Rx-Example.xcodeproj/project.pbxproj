@@ -30,10 +30,18 @@
 		728A2609222F88C500654DAE /* RightTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A2608222F88C500654DAE /* RightTabViewModel.swift */; };
 		728A260B222F8AD800654DAE /* LeftTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */; };
 		728A260D222F8AE600654DAE /* RightTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A260C222F8AE600654DAE /* RightTabCoordinator.swift */; };
+		87087718227168AA00866020 /* ServerAPI+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87087717227168AA00866020 /* ServerAPI+Error.swift */; };
+		8708771A2271693B00866020 /* ObservableType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870877192271693B00866020 /* ObservableType+.swift */; };
+		8708771D22716BB000866020 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708771C22716BB000866020 /* SearchModel.swift */; };
 		875DDE22222FC2FE0098A120 /* BaseCoordinator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875DDE21222FC2FD0098A120 /* BaseCoordinator+.swift */; };
 		875EA20022375CF200472810 /* TabDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA1FF22375CF200472810 /* TabDetailViewController.swift */; };
 		875EA20222375D0A00472810 /* TabDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA20122375D0A00472810 /* TabDetailViewModel.swift */; };
 		875EA20422375D1F00472810 /* TabDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA20322375D1F00472810 /* TabDetailCoordinator.swift */; };
+		87D3896E225611AD00AC3E64 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3896D225611AD00AC3E64 /* Server.swift */; };
+		87D389702256120A00AC3E64 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3896F2256120A00AC3E64 /* ServerAPI.swift */; };
+		87D38974225612C000AC3E64 /* Server+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D38973225612C000AC3E64 /* Server+Target.swift */; };
+		87D3897822571A3C00AC3E64 /* DevelopmentStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3897722571A3C00AC3E64 /* DevelopmentStateType.swift */; };
+		87D3897A22571A7300AC3E64 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3897922571A7300AC3E64 /* Define.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +83,18 @@
 		728A2608222F88C500654DAE /* RightTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabViewModel.swift; sourceTree = "<group>"; };
 		728A260A222F8AD800654DAE /* LeftTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTabCoordinator.swift; sourceTree = "<group>"; };
 		728A260C222F8AE600654DAE /* RightTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTabCoordinator.swift; sourceTree = "<group>"; };
+		87087717227168AA00866020 /* ServerAPI+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerAPI+Error.swift"; sourceTree = "<group>"; };
+		870877192271693B00866020 /* ObservableType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+.swift"; sourceTree = "<group>"; };
+		8708771C22716BB000866020 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		875DDE21222FC2FD0098A120 /* BaseCoordinator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseCoordinator+.swift"; sourceTree = "<group>"; };
 		875EA1FF22375CF200472810 /* TabDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailViewController.swift; sourceTree = "<group>"; };
 		875EA20122375D0A00472810 /* TabDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailViewModel.swift; sourceTree = "<group>"; };
 		875EA20322375D1F00472810 /* TabDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailCoordinator.swift; sourceTree = "<group>"; };
+		87D3896D225611AD00AC3E64 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		87D3896F2256120A00AC3E64 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
+		87D38973225612C000AC3E64 /* Server+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Target.swift"; sourceTree = "<group>"; };
+		87D3897722571A3C00AC3E64 /* DevelopmentStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentStateType.swift; sourceTree = "<group>"; };
+		87D3897922571A7300AC3E64 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		FDB20983AEF639B55B68FDE9 /* Pods_Coordinator_MVVM_Rx_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coordinator_MVVM_Rx_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +146,8 @@
 				7286FB6B222E408A00538946 /* App */,
 				7286FB68222E402200538946 /* Scenes */,
 				7286FB6A222E403800538946 /* Resources */,
+				8708771B22716B5800866020 /* Model */,
+				87D3896C22560F1800AC3E64 /* Services */,
 			);
 			path = "Coordinator-MVVM-Rx-Example";
 			sourceTree = "<group>";
@@ -225,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				7286FB83222E515200538946 /* Storyboard.swift */,
+				87D3897722571A3C00AC3E64 /* DevelopmentStateType.swift */,
+				87D3897922571A7300AC3E64 /* Define.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -257,6 +277,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8708771B22716B5800866020 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8708771C22716BB000866020 /* SearchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		873B21DE22327825000EAB33 /* TabDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +293,18 @@
 				875EA20322375D1F00472810 /* TabDetailCoordinator.swift */,
 			);
 			path = TabDetail;
+			sourceTree = "<group>";
+		};
+		87D3896C22560F1800AC3E64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				87D3896D225611AD00AC3E64 /* Server.swift */,
+				87D38973225612C000AC3E64 /* Server+Target.swift */,
+				87D3896F2256120A00AC3E64 /* ServerAPI.swift */,
+				87087717227168AA00866020 /* ServerAPI+Error.swift */,
+				870877192271693B00866020 /* ObservableType+.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BC1B2B23DBE1CFAC300F0959 /* Pods */ = {
@@ -401,15 +441,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coordinator-MVVM-Rx-Example/Pods-Coordinator-MVVM-Rx-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,25 +474,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				728A2609222F88C500654DAE /* RightTabViewModel.swift in Sources */,
+				87D3897A22571A7300AC3E64 /* Define.swift in Sources */,
 				875EA20222375D0A00472810 /* TabDetailViewModel.swift in Sources */,
+				8708771D22716BB000866020 /* SearchModel.swift in Sources */,
 				7286FB7E222E4F7700538946 /* StoryboardInitializable.swift in Sources */,
 				7286FB72222E43B900538946 /* LoginViewModel.swift in Sources */,
 				728A2605222F884400654DAE /* LeftTabViewModel.swift in Sources */,
 				7286FB79222E496900538946 /* BaseCoordinator.swift in Sources */,
+				87D3896E225611AD00AC3E64 /* Server.swift in Sources */,
 				7286FB70222E431100538946 /* LoginViewController.swift in Sources */,
 				728A2607222F88B900654DAE /* RightTabViewController.swift in Sources */,
 				875EA20422375D1F00472810 /* TabDetailCoordinator.swift in Sources */,
 				875DDE22222FC2FE0098A120 /* BaseCoordinator+.swift in Sources */,
 				7286FB84222E515200538946 /* Storyboard.swift in Sources */,
+				87D38974225612C000AC3E64 /* Server+Target.swift in Sources */,
+				8708771A2271693B00866020 /* ObservableType+.swift in Sources */,
 				7286FB8A222E73F800538946 /* MainCoordinator.swift in Sources */,
 				728A260B222F8AD800654DAE /* LeftTabCoordinator.swift in Sources */,
 				7286FB88222E72A900538946 /* MainViewModel.swift in Sources */,
 				728A260D222F8AE600654DAE /* RightTabCoordinator.swift in Sources */,
+				87D389702256120A00AC3E64 /* ServerAPI.swift in Sources */,
 				7286FB76222E48A100538946 /* LoginCoordinator.swift in Sources */,
 				7286FB86222E727100538946 /* MainViewController.swift in Sources */,
 				7286FB49222E3FE700538946 /* AppDelegate.swift in Sources */,
 				875EA20022375CF200472810 /* TabDetailViewController.swift in Sources */,
+				87D3897822571A3C00AC3E64 /* DevelopmentStateType.swift in Sources */,
 				7286FB7B222E49FC00538946 /* AppCoordinator.swift in Sources */,
+				87087718227168AA00866020 /* ServerAPI+Error.swift in Sources */,
 				728A2603222F882D00654DAE /* LeftTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,7 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PDE65S5MLH;
+				DEVELOPMENT_TEAM = Y35CVJZCJ5;
 				INFOPLIST_FILE = "$(SRCROOT)/Coordinator-MVVM-Rx-Example/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -627,7 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PDE65S5MLH;
+				DEVELOPMENT_TEAM = Y35CVJZCJ5;
 				INFOPLIST_FILE = "$(SRCROOT)/Coordinator-MVVM-Rx-Example/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

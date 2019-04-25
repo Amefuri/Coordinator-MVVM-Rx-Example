@@ -11,10 +11,11 @@ import RxCocoa
 
 protocol TabDetailViewModelInputs {
   var navigateBackTrigger: PublishSubject<Void> { get }
+  var searchButtonTrigger: PublishSubject<String> { get }
 }
 
 protocol TabDetailViewModelOutputs {
-    
+  var displaySearchData: PublishSubject<[SearchModel]> { get }
 }
 
 protocol TabDetailViewModelCoordinates {
@@ -36,9 +37,18 @@ class TabDetailViewModel: TabDetailViewModelType, TabDetailViewModelInputs, TabD
   
   // MARK: Init
   
-  public init() {
-    inputs.navigateBackTrigger
+  public init(api: ServerAPI = ServerAPI()) {
+    
+    inputs
+      .navigateBackTrigger
       .bind(to: coordinates.navigateBack)
+      .disposed(by: disposeBag)
+    
+    inputs
+      .searchButtonTrigger
+      .flatMapLatest{
+        api.rx_searchRepo(keyword: $0)
+      }.bind(to: displaySearchData)
       .disposed(by: disposeBag)
   }
   
@@ -47,9 +57,12 @@ class TabDetailViewModel: TabDetailViewModelType, TabDetailViewModelInputs, TabD
   // MARK: Input
   
   var navigateBackTrigger = PublishSubject<Void>()
+  var searchButtonTrigger = PublishSubject<String>()
     
   // MARK: Output
 
+  var displaySearchData = PublishSubject<[SearchModel]>()
+  
   // MARK: Coordinates
   
   var navigateBack = PublishSubject<Void>()
